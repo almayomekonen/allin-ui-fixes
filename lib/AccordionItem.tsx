@@ -32,7 +32,7 @@ export default function AccordionItem({
               name={icon}
             />
           )}
-          <p className="group-open/acrdn:text-amber-400">{title}</p>
+          <p className="group-open/acrdn:text-solid">{title}</p>
         </div>
         <Icon
           name="chevron-left"
