@@ -1,7 +1,6 @@
 import Icon, { IconNames } from "@/lib/Icon";
 
 interface AccordionItemProps {
-  name: string;
   title: string;
   children: React.ReactNode;
   className?: string;
@@ -12,44 +11,38 @@ interface AccordionItemProps {
 
 export default function AccordionItem({
   title,
-  className,
   children,
-  bodyClass,
   icon,
   open,
 }: AccordionItemProps) {
   return (
     <details
       name="x"
-      className={`group/acrdn border-b border-gray-200 dark:border-gray-700 last:border-b-0 ${
-        className || ""
-      }`}
+      className="group/acrdn bg-white rounded-lg border border-gray-200 overflow-hidden"
       open={open}
     >
-      <summary className="cursor-pointer p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-between select-none">
+      <summary className="cursor-pointer p-4 hover:bg-gray-50 transition-colors flex items-center justify-between select-none list-none [&::-webkit-details-marker]:hidden">
         <div className="flex items-center gap-3">
           {icon && (
             <Icon
               type="reg"
-              className="group-open/acrdn:bg-blue-600 dark:group-open/acrdn:bg-blue-400"
+              className="group-open/acrdn:bg-blue-500"
               name={icon}
             />
           )}
-          <p className="text-black group-open/acrdn:text-blue-600 dark:group-open/acrdn:text-blue-400 font-medium">
+          <p className="text-gray-900 group-open/acrdn:text-blue-600 font-medium">
             {title}
           </p>
         </div>
         <Icon
           name="chevron-left"
-          className="duration-200 group-open/acrdn:rotate-90 group-open/acrdn:bg-blue-600 dark:group-open/acrdn:bg-blue-400"
+          className="transition-transform duration-200 group-open/acrdn:rotate-90 group-open/acrdn:bg-blue-500"
         />
       </summary>
-      <div
-        className={`p-4 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 ${
-          bodyClass || ""
-        }`}
-      >
-        {children}
+      <div className="grid transition-all duration-300 ease-in-out group-open/acrdn:grid-rows-[1fr] grid-rows-[0fr]">
+        <div className="overflow-hidden">
+          <div className="p-4 pt-0 text-gray-600">{children}</div>
+        </div>
       </div>
     </details>
   );
