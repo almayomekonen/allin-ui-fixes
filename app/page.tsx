@@ -1,13 +1,13 @@
+"use client";
+
 import AccordionItem from "@/lib/AccordionItem";
 
-export default function page() {
+export default function SelfEdit({}) {
   return (
-    <div className="min-h-screen p-8">
-      <div className="accordion max-w-2xl mx-auto space-y-4 ">
-        <AccordionItem title="Sample Accordion">
-          <p className="text-amber-900">
-            This is the content of the accordion item.
-          </p>
+    <div>
+      <div className="accordion border rounded-lg my-6  bg-white">
+        <AccordionItem title="מבצעים שחלפו">
+          <p>טקסט</p>
         </AccordionItem>
       </div>
     </div>
