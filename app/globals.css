@@ -35,21 +35,21 @@ body {
 @utility accordion {
   @apply bg-white rounded-lg border overflow-hidden;
 
-  details::details-content {
+  /* details::details-content {
     block-size: 0;
     transition: block-size 0.3s, content-visibility 0.3s;
     transition-behavior: allow-discrete;
     overflow: hidden;
-  }
+  } */
 
   /* , opacity 0.3s */
   /* opacity: 0; */
   /* opacity: 1; */
 
-  details:open::details-content {
+  /* details:open::details-content {
     block-size: auto;
     block-size: calc-size(auto, size);
-  }
+  } */
 
   details {
     summary {
