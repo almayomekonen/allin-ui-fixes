@@ -46,10 +46,10 @@ body {
   /* opacity: 0; */
   /* opacity: 1; */
 
-  /* details:open::details-content {
+  details:open::details-content {
     block-size: auto;
     block-size: calc-size(auto, size);
-  } */
+  }
 
   details {
     summary {
